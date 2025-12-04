@@ -1,0 +1,301 @@
+/* ===================================
+   BRAND COLORS
+   =================================== */
+:root {
+    --primary-evergreen: #1C4E4B;
+    --digital-white: #FAFAFA;
+    --tech-slate: #333C48;
+    --accent-glow: #70D287;
+    --ocean-blue: #007AFF;
+    --pure-black: #000000;
+    --gold: #FFD700;
+    --red-alert: #FF4444;
+    --burnt-orange: #FF8C42;
+}
+
+/* ===================================
+   RESET & BASE
+   =================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--pure-black);
+    color: var(--digital-white);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* ===================================
+   HEADER
+   =================================== */
+.page-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    z-index: 100;
+    background: transparent;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+.contact a {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(250, 250, 250, 0.7);
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact a:hover {
+    color: var(--accent-glow);
+}
+
+/* ===================================
+   HERO SECTION (SECTION 1)
+   =================================== */
+.hero-section {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: var(--pure-black);
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 20vh;
+}
+
+#hero-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 1200px;
+    padding: 0 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* ===================================
+   TYPOGRAPHY - MODERN ROUNDED
+   =================================== */
+.hero-preheadline {
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5em;
+    color: rgba(250, 250, 250, 0.7);
+    margin-bottom: 0.5rem;
+    letter-spacing: 0em;
+}
+
+.hero-headline {
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 600;
+    font-size: 72px;
+    line-height: 1.2em;
+    color: var(--digital-white);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.01em;
+    min-height: 1.2em;
+}
+
+.accent-color {
+    color: var(--burnt-orange);
+}
+
+.cursor {
+    font-weight: 300;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 49% { opacity: 1; }
+    50%, 100% { opacity: 0; }
+}
+
+.hero-tagline {
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5em;
+    color: rgba(250, 250, 250, 0.7);
+    letter-spacing: 0.02em;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero-subhead {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 1.5em;
+    color: rgba(250, 250, 250, 0.6);
+    max-width: 700px;
+    margin: 0 auto;
+    letter-spacing: 0.01em;
+}
+
+/* ===================================
+   SCROLL INDICATOR
+   =================================== */
+.scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    opacity: 0;
+    animation: fadeInScroll 1s ease-in-out 2s forwards;
+}
+
+.scroll-line {
+    width: 2px;
+    height: 60px;
+    background: linear-gradient(to bottom, var(--accent-glow), transparent);
+    position: relative;
+    animation: scrollPulse 2s ease-in-out infinite;
+}
+
+.scroll-line::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 8px;
+    background: var(--accent-glow);
+    border-radius: 50%;
+    animation: scrollDot 2s ease-in-out infinite;
+}
+
+/* ===================================
+   RESPONSIVE - MOBILE
+   =================================== */
+@media (max-width: 768px) {
+    .page-header {
+        padding: 15px 20px;
+    }
+
+    .logo img {
+        height: 30px;
+    }
+
+    .contact {
+        font-size: 10px;
+    }
+
+    .hero-preheadline {
+        font-size: 16px;
+    }
+
+    .hero-headline {
+        font-size: 48px;
+        letter-spacing: -0.01em;
+        min-height: 1.2em;
+    }
+
+    .hero-tagline {
+        font-size: 16px;
+    }
+
+    .hero-content {
+        padding: 0 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        height: 25px;
+    }
+
+    .contact {
+        font-size: 9px;
+    }
+
+    .hero-preheadline {
+        font-size: 14px;
+    }
+
+    .hero-headline {
+        font-size: 36px;
+        letter-spacing: 0em;
+        min-height: 1.2em;
+    }
+
+    .hero-tagline {
+        font-size: 14px;
+    }
+}
+
+/* ===================================
+   ANIMATIONS
+   =================================== */
+@keyframes revealText {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInScroll {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.6;
+    }
+}
+
+@keyframes scrollPulse {
+    0%, 100% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes scrollDot {
+    0% {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-50%) translateY(50px);
+        opacity: 0;
+    }
+}
