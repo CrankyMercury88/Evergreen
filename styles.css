@@ -52,7 +52,7 @@ body {
 }
 
 .logo img {
-    height: 40px;
+    height: 60px;
     width: auto;
 }
 
@@ -207,7 +207,7 @@ body {
     }
 
     .logo img {
-        height: 30px;
+        height: 45px;
     }
 
     .contact {
@@ -235,7 +235,7 @@ body {
 
 @media (max-width: 480px) {
     .logo img {
-        height: 25px;
+        height: 38px;
     }
 
     .contact {
