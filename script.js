@@ -206,7 +206,7 @@ const phrases = [
     "manage 2B people's chronic illness<span class='accent-color'>.</span>",
     "save $2T in healthcare costs<span class='accent-color'>.</span>"
 ];
-const finalPhrase = "Stop <span class='accent-color'>inflammation.</span>";
+const finalPhrase = "Stop chronic <span class='accent-color'>inflammation.</span>";
 
 let phraseIndex = 0;
 let charIndex = 0;
@@ -329,4 +329,5 @@ function typeWriter() {
 
 function startTypewriter() {
     typeWriter();
+
 }
