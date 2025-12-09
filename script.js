@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Manage 2B cases of chronic inflammation',
         'Extend the average healthspan past 100 years',
         'Save $2T in healthcare costs',
-        'Stop Chronic Inflammation'
+        'Stop chronic inflammation'
     ];
 
     const missionRotator = document.getElementById('missionRotator');
